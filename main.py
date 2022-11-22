@@ -5,7 +5,7 @@ from lg import *
 def plot_N_loss():
 
     all_train_losses = []
-    all_test_losses = []
+    all_val_losses = []
     N = 0 
 
     '''
@@ -16,11 +16,11 @@ def plot_N_loss():
     '''
 
     ### no need to modify code below
-    ### all_train_losses and all_test_losses have length 30
+    ### all_train_losses and all_val_losses have length 30
             
     x = [i for i in range(1, 31)]
     plt.plot(x, all_train_losses, 'b', label='train')
-    plt.plot(x, all_test_losses, 'r', label='test')
+    plt.plot(x, all_val_losses, 'r', label='val')
     plt.legend()
     plt.xlabel('N')
     plt.ylabel('MSE loss')
